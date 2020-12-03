@@ -1,8 +1,8 @@
 import React from 'react';
-
+import PropTypes from 'prop-types'
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default (props) => {
+const Congrats = (props) => {
         if(props.success){
             return(
             <div data-testid="component-congrats">
@@ -18,3 +18,9 @@ export default (props) => {
             );
         }
 }
+
+Congrats.PropTypes = {
+    success: PropTypes.bool.isRequired,
+};
+
+export default Congrats;
